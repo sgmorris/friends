@@ -1,0 +1,23 @@
+---
+title: "Tidytuesday Friends data"
+author: "Steve"
+date: "08/09/2020"
+output: github_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+
+library(tidytuesdayR)
+library(ggplot2)
+
+```
+
+
+The data load
+
+```{r}
+tuesdata <- tidytuesdayR::tt_load('2020-09-08')
+
+```
+
