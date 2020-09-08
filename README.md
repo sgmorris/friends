@@ -42,7 +42,8 @@ ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-Heatmap of who mentions who the most
+Heatmap of who mentions who the most. Seems Rachel mentions Ross a lot
+more times than Ross mentions Rachel.
 
 ``` r
 # the "quotes" data
