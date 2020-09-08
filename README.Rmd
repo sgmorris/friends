@@ -22,7 +22,7 @@ tuesdata <- tidytuesdayR::tt_load('2020-09-08')
 ```
 
 
-Audience over time. 
+**Audience over time**  
 
 * The rise and fall
 * the double episode cliffhanger trick at the end of every season from 4 onwards
@@ -42,7 +42,9 @@ ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
 
 ```
 
-Heatmap of how many times each character mentions the other characters. 
+**Heatmap**  
+
+how many times each character mentions the other characters. 
 
 ```{r}
 # the "quotes" data

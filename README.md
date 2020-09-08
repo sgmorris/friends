@@ -23,7 +23,7 @@ tuesdata <- tidytuesdayR::tt_load('2020-09-08')
     ##  Downloading file 2 of 3: `friends_info.csv`
     ##  Downloading file 3 of 3: `friends_emotions.csv`
 
-Audience over time.
+**Audience over time**
 
   - The rise and fall
   - the double episode cliffhanger trick at the end of every season from
@@ -50,7 +50,9 @@ ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-Heatmap of how many times each character mentions the other characters.
+**Heatmap**
+
+how many times each character mentions the other characters.
 
 ``` r
 # the "quotes" data
