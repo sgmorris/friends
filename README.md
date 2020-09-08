@@ -1,6 +1,15 @@
 Tidytuesday Friends data
 ================
 
+``` r
+# Package loads
+library(ggplot2)
+library(reshape2)
+library(viridis)
+```
+
+    ## Loading required package: viridisLite
+
 The data load. This is a list of three data frames as per the
 tidytuesday page
 <https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-08/readme.md>
