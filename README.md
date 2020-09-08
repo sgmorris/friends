@@ -1,7 +1,5 @@
 Tidytuesday Friends data
 ================
-Steve
-08/09/2020
 
 The data load. This is a list of three data frames as per the
 tidytuesday page
@@ -21,7 +19,7 @@ Audience over time.
   - The rise and fall
   - the double episode cliffhanger trick at the end of every season from
     4 onwards
-  - the succesful ratings scam in season 2
+  - the superbowl assisted ratings boost in season 2
     <https://en.wikipedia.org/wiki/The_One_After_the_Superbowl>
 
 <!-- end list -->
@@ -42,8 +40,7 @@ ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
 
 ![](README_files/figure-gfm/unnamed-chunk-2-1.png)<!-- -->
 
-Heatmap of who mentions who the most. Seems Rachel mentions Ross a lot
-more times than Ross mentions Rachel.
+Heatmap of how many times each character mentions the other characters.
 
 ``` r
 # the "quotes" data

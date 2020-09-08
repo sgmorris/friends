@@ -1,7 +1,5 @@
 ---
 title: "Tidytuesday Friends data"
-author: "Steve"
-date: "08/09/2020"
 output: github_document
 ---
 
@@ -28,7 +26,7 @@ Audience over time.
 
 * The rise and fall
 * the double episode cliffhanger trick at the end of every season from 4 onwards
-* the succesful ratings scam in season 2 <https://en.wikipedia.org/wiki/The_One_After_the_Superbowl>
+* the superbowl assisted ratings boost in season 2 <https://en.wikipedia.org/wiki/The_One_After_the_Superbowl>
 
 ```{r}
 info <- tuesdata$friends_info
@@ -43,7 +41,7 @@ ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
 
 ```
 
-Heatmap of who mentions who the most. Seems Rachel mentions Ross a lot more times than Ross mentions Rachel. 
+Heatmap of how many times each character mentions the other characters. 
 
 ```{r}
 # the "quotes" data
