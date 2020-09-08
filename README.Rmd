@@ -32,9 +32,10 @@ Audience over time.
 info <- tuesdata$friends_info
 
 # subset frame to identify the "superbowl" episodes in season 2
-sb <- subset(info, season==2)
-sb <- sb[grep("Superbowl", sb$title),]
+sb <- info[grep("Superbowl", info$title),]
 
+# using geom_text(data=sb,...) so the text only appears in the
+# season 2 facet 
 ggplot(data=info, aes(x=episode, y=us_views_millions)) + geom_line() +
   geom_smooth() + facet_wrap(vars(season)) + 
   geom_text(data=sb[1,], label="Superbowl", vjust="bottom", hjust="right")
@@ -72,7 +73,7 @@ for(i in first.names){
 # set self mentions to missing. This makes a more readable heatmap
 diag(out) <- NA
 
-# sort rows according to word count
+# sort rows and columns according to number of names mentioned
 tots <- sort(apply(out, 1, sum, na.rm=TRUE))
 out <- out[names(tots), names(tots)]
 
