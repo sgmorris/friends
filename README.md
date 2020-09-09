@@ -10,7 +10,7 @@ library(viridis)
 
     ## Loading required package: viridisLite
 
-The data load. This is a list of three data frames as per the [tidytuesday page.](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-08/readme.md){:target="_blank"}
+The data load. This is a list of three data frames as per the [tidytuesday page.](https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-08/readme.md)
 
 ``` r
 tuesdata <- tidytuesdayR::tt_load('2020-09-08')
