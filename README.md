@@ -15,13 +15,14 @@ tidytuesday page
 <https://github.com/rfordatascience/tidytuesday/blob/master/data/2020/2020-09-08/readme.md>
 
 ``` r
-tuesdata <- tidytuesdayR::tt_load('2020-09-08')
-```
+# tt_load only allows 10 downloads in 24h
+#tuesdata <- tidytuesdayR::tt_load('2020-09-08')
 
-    ## 
-    ##  Downloading file 1 of 3: `friends.csv`
-    ##  Downloading file 2 of 3: `friends_info.csv`
-    ##  Downloading file 3 of 3: `friends_emotions.csv`
+# these are the direct download calls
+friends <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends.csv')
+friends_emotions <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends_emotions.csv')
+info <- readr::read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2020/2020-09-08/friends_info.csv')
+```
 
 **Audience over time**
 
@@ -34,8 +35,6 @@ tuesdata <- tidytuesdayR::tt_load('2020-09-08')
 <!-- end list -->
 
 ``` r
-info <- tuesdata$friends_info
-
 # subset frame to identify the "superbowl" episodes in season 2
 sb <- info[grep("Superbowl", info$title),]
 
@@ -56,8 +55,6 @@ how many times each character mentions the other characters.
 
 ``` r
 # the "quotes" data
-friends <- tuesdata$friends
-
 # subset to quotes from the main characters
 main.characters <- c("Monica Geller", "Joey Tribbiani",
                      "Chandler Bing", "Phoebe Buffay", 
